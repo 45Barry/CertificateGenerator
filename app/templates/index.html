@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Проект по flask</h1>
+    <nav>
+        Проект для генерации сертификатов в индивидуальном экземпляре и по спискам в формате xlsx
+        <p><a href="{{ url_for('certificateCreate') }}">Сертификаты</a></p>
+    </nav>
+</div>
+{% endblock %}

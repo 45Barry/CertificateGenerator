@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav class="container">
+    <h1>Войти</h1>
+
+    <form action="" method="post"  novalidate class="form-group color-red">
+
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
+
+    </form>
+
+<p>Новый пользователь <a href="{{ url_for('register') }}">Зарегистрироваться</a></p>
+</nav>
+ {% endblock %}
+

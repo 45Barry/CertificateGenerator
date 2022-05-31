@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.file.label }}<br>
+            {{ form.file }}<br>
+        </p>
+
+        <p>
+            {{ form.hight.label }}<br>
+            {{ form.hight }}<br>
+        </p>
+        <p>
+            {{ form.text_size.label }}<br>
+            {{ form.text_size }}<br>
+        </p>
+        <p>
+            {{ form.name_surname.label }}<br>
+            {{ form.name_surname }}<br>
+        </p>
+        <p>
+            {{ form.middle_name.label }}<br>
+            {{ form.middle_name }}<br>
+        </p>
+        <p>
+            {{ form.list_participants.label }}<br>
+            {{ form.list_participants }}<br>
+        </p>
+            <p>
+            {{ form.path_name.label }}<br>
+            {{ form.path_name }}<br>
+        </p>
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
